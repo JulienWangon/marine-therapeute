@@ -1,6 +1,6 @@
 <?php
 
-abstract class Databasa {
+abstract class Database {
     private static $pdo;
 
     private static function setBdd() {
