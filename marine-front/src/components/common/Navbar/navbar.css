@@ -1,0 +1,61 @@
+
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  
+  z-index: 2000;
+  background-color: transparent !important;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%; 
+}
+
+.navItem {
+  margin-bottom: 0.1em;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #F5F5DC;
+  font-size: 1.2rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  padding: 0.8rem;
+  transition: color 0.8s ease; 
+}
+
+
+.navbar-toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #5A1D3E;
+  width: 30px;
+  height: 30px;
+  
+}
+
+
+i {
+  color: #5A1D3E;
+}
+
+.navbar-toggler:active {
+  border: 1px solid #5A1D3E;
+}
+
+
+.offcanvas {
+  background-color: rgba(90, 29, 62, 0.8);
+}
+
+i:hover {
+  color: white;  
+}
+
