@@ -16,10 +16,10 @@ class ServicesRepository extends Database {
 
       $services = [];
       foreach($servicesData as $serviceData) {
-          $service = new Services(
-            $serviceData['id'],
+          $service = new Services(        
             $serviceData['name'],
-            $serviceData['pathImg']
+            $serviceData['pathImg'],
+            $serviceData['id'],
           );
           $services[] = $service;
       }
@@ -30,9 +30,6 @@ class ServicesRepository extends Database {
       $this->handleException($e, "extraction de la liste des services");
     }
   }
-
-
-
 
 }
 
