@@ -1,3 +1,4 @@
 <?php
 
-require_once './api/routes/router.php';
+
+require_once '../marine-therapeute/api/routes/router.php';
