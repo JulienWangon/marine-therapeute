@@ -17,9 +17,9 @@ class ContactDetailsRepository extends Database {
             $contactDetails = [];
             foreach($contactDetailsData as $contactDetailData) {
                 $contactDetail = new ContactDetails(
-                    $contactDetailData["address"],
+                    $contactDetailData["adress"],
                     $contactDetailData["phone"],
-                    $contactDetailData["idContactDetails"]
+                    $contactDetailData["id"]
                 );
                 $contactDetails[] = $contactDetail;
             }
