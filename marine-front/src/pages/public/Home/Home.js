@@ -10,10 +10,20 @@ import logo2 from '../../../assets/img/logo2.webp';
 import logo3 from '../../../assets/img/logo3.webp';
 import logo4 from '../../../assets/img/logo4.webp';
 import marine from '../../../assets/img/marine.webp';
+import plante from '../../../assets/img/plante.webp';
+
+
 import SocialMedia from '../../../components/SocialMedia/SocialMedia';
+import SectionServices from '../../../components/ServicesCard/SectionServices';
 
 
 const Home = () => {
+
+  const handlePsychoClick = () => {
+    window.open('https://www.psychologue.net/cabinets/marine-ottaviani', '_blank');
+  };
+
+  
   return (
     <>
       <Navbar/>
@@ -86,8 +96,15 @@ const Home = () => {
         </section>
         <section className="fourSection">
           <h2>Oser le changement, révélez votre potentiel</h2>
-
-
+          <SectionServices/>
+          <p className="infoText">Grâce à ces diffèrentes méthodes thérapeutique, nous découvront ensemble ce qui bloque ou freine l'atteinte de vos objectifs ou de votre épanouissement</p>
+          <p className="infoText">Dans le respect de votre rythme et de vos intentions, je vous aide à faire naître la version de vous-même qui vous convient, l'être qui vous habite, vos projets, ce qui vous tient à coeur, le parent que vous êtes, l'amant(e) qui sommeille en vous, les relations harmonieuses que vous souhaitez vivre.</p>
+          <img className="decoImg" src={plante} alt="à définir"/>
+          <p className="infoText">Je suis également sage-fmme et c'est tout naturellement que mon activité professionnelle à évolué vers le domaine de la santé mentale et du bien-être.</p>
+          <p className="infoText">Je suis donc plus spécialisée dans tout ce qui touhe à la femme, au couple, aux relations amoureuses, à la fammille, à la grossesse, à la naissance d'un enfant, à son éducation, au "métier" de parent(s).</p>
+          <button class="buttonPsycho" onClick={handlePsychoClick}>
+            Prendre rendez-vous via psychologue.net
+          </button>
         </section>
 
 

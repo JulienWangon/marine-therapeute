@@ -133,11 +133,11 @@ section {
 }
 
 h2 {
+  padding: 1em;
   font-family: "Averia Libre", system-ui;
   color: #5A1D3E;
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 2em;
 }
 
 .infoCardWrapper {
@@ -155,6 +155,8 @@ h2 {
   font-size: 0.8rem;
   color: #5A1D3E;
   font-family: "Open Sans", sans-serif;
+  padding: 1.5em;
+  margin: 0;
 }
 
 .thirdIntro {
@@ -174,3 +176,28 @@ h2 {
     flex-direction: column;
     align-items: center;
 }
+
+.decoImg {
+  width: 100vw;
+}
+
+.buttonPsycho {
+  padding: 0.5em;
+  border: .2rem solid #5A1D3E;
+  border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+  color: #5A1D3E;
+  background: none;
+  cursor: pointer;
+  margin-top: 1em;
+  font-size: 0.9rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  transition: all .2s linear;
+  width: 45%;
+}
+
+.buttonPsycho:hover {
+  border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+  border: .2rem solid #5A1D3E;
+}
+
