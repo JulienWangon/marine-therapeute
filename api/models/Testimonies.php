@@ -1,6 +1,6 @@
 <?php
 
-class Tesrtimonies {
+class Testimonies {
   
   private ?int $id;
   private ?string $firstName;
