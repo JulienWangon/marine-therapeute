@@ -165,22 +165,26 @@ h2 {
   font-size: 0.8rem;;
 }
 
+/*Photo marine*/
 .portrait {
     border-radius: 50%;
     border: 2px solid green;
     width: 10rem;
 }
 
+/*Réseau sociaux*/
 .socialWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*Image main et plante*/
 .decoImg {
   width: 100vw;
 }
 
+/*Button pour rdv psychologue.net*/
 .buttonPsycho {
   padding: 0.5em;
   border: .2rem solid #5A1D3E;
@@ -201,3 +205,4 @@ h2 {
   border: .2rem solid #5A1D3E;
 }
 
+/**/
