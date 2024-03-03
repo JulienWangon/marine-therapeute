@@ -8,7 +8,7 @@ class ServicesRepository extends Database {
   public function getServices() :array {
     try {
       $db = $this->getBdd();
-      $req = "SELECT * FROM services";
+      $req = "SELECT * FROM `services` ORDER BY `services`.`id` ASC";
 
       $stmt = $db->prepare($req);
       $stmt->execute();
