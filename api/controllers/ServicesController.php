@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../models/Services.php';
 require_once __DIR__ . '/../repository/ServicesRepository.php';
 require_once __DIR__ . '/../classes/ResponsesHelper.php';
+require_once __DIR__ . '/../config/config.php';
 
 class ServicesController {
   private $servicesRepository;
@@ -24,7 +25,7 @@ class ServicesController {
         return [
           'idService' => $service->getId(),
           'serviceName' => $service->getName(),
-          'pathImage' => $service->getPathImage()
+          'pathImage' => BASE_PATH . $service->getPathImage()
         ];
       }, $services);
       ResponseHelper::sendResponse(['status' => 'success', 'data' => $servicesArray]);
