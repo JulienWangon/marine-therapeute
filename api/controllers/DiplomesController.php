@@ -24,7 +24,7 @@ class DiplomesController {
       $diplomesArray = array_map(function($diplome) {
         return [
           'idDiplome' => $diplome->getId(),
-          'diplome' => $diplome->getDiplomes(),
+          'diplome' => $diplome->getDiplome(),
           'intitule' => $diplome->getIntitule(),
           'lieu' => $diplome->getLieu()
         ];
