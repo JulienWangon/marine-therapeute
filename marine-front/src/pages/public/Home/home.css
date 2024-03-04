@@ -248,4 +248,57 @@ h2 {
   font-size: 0.8rem;
 }
 
+.asterixInfo {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.6rem;
+  color: #5A1D3E;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0.5em;
+}
 
+.neovieWrapper {
+  text-align: center;
+  margin-top: 3em;
+}
+.logoNeovie {
+  width: 50vw;
+  cursor: pointer;
+  margin-top:1em;
+}
+
+.neovieTitle {
+  color: #5A1D3E;
+  font-family: "Averia Libre", system-ui;
+}
+
+.impotWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  
+  width: 95vw;
+}
+.impotCheque {
+  width: 20%;
+  height: 20%;
+ 
+}
+
+.impotText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.6rem;
+  color: #5A1D3E;
+  padding: em;
+  text-align: center;
+  margin: auto;
+}
+
+.sixSection {
+  margin-top: 2em;
+}
+
+.ethiqueImg {
+  width: 100vw;
+}
