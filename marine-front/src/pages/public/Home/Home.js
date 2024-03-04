@@ -15,6 +15,8 @@ import plante from '../../../assets/img/plante.webp';
 
 import SocialMedia from '../../../components/SocialMedia/SocialMedia';
 import SectionServices from '../../../components/ServicesCard/SectionServices';
+import TestimoniesSlider from '../../../components/Testimonies/TestimoniesSlider/TestimoniesSlider';
+import Button from '../../../components/common/Button/Button';
 
 
 const Home = () => {
@@ -102,17 +104,24 @@ const Home = () => {
           <img className="decoImg" src={plante} alt="à définir"/>
           <p className="infoText">Je suis également sage-fmme et c'est tout naturellement que mon activité professionnelle à évolué vers le domaine de la santé mentale et du bien-être.</p>
           <p className="infoText">Je suis donc plus spécialisée dans tout ce qui touhe à la femme, au couple, aux relations amoureuses, à la fammille, à la grossesse, à la naissance d'un enfant, à son éducation, au "métier" de parent(s).</p>
-          <button class="buttonPsycho" onClick={handlePsychoClick}>
-            Prendre rendez-vous via psychologue.net
+          <button className="buttonPsycho" onClick={handlePsychoClick}>
+            Prendre rendez-vous
           </button>
         </section>
         <section className="fiveSection">
-
+          <h2 className="sliderTitle">Quand le changement prend racine: vos témoignages sont précieux</h2>
+          <TestimoniesSlider/>
+          <Button className="testimonyBtn purpleBtn" text="Avis"/>
+          <div className="priceWrapper">
+              <h3 className="priceTitle">TARIFS*</h3>
+              <ul className="priceList">
+                <li className="priceItem">Séance individuelle: 60€ à 100€ la séance</li>
+                <li className="priceItem">Séance de couple ou en famille: 100€ la séance</li>
+              </ul>
+          </div>
+          <p className="infoText">Merci de prévenir le plus tôt possible d'un changement ou d'une annulation. Tout rendez-vous non honoré et non justifié moins de 48 heures en avance sera dû.</p>
           
         </section>
-
-
-
       </main>
 
 

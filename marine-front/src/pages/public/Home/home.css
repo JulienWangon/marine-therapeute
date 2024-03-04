@@ -133,7 +133,7 @@ section {
 }
 
 h2 {
-  padding: 1em;
+  padding: 0.5em;
   font-family: "Averia Libre", system-ui;
   color: #5A1D3E;
   font-size: 1.2rem;
@@ -205,4 +205,47 @@ h2 {
   border: .2rem solid #5A1D3E;
 }
 
-/**/
+.fiveSection {
+  width: 100vw;
+}
+
+.sliderTitle {
+  margin-top: 1.5em;
+  padding: 0.5em;
+}
+
+.testimonyBtn {
+  margin-top: 3em;
+}
+
+.priceWrapper {
+  position: relative;
+  background: #F6EDE8;
+  border: 1px solid transparent;
+  width: 90vw;
+  margin-top:2.5em;
+  padding: 0.6em;
+  border-radius: 10px;
+  text-align: center;
+  color: #5A1D3E;
+}
+
+.priceWrapper::before {
+  content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background: #5A1D3E;
+    z-index: -1;
+    transform: skew(2deg,1deg);
+    border-radius: 10px;
+}
+
+.priceItem {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+
