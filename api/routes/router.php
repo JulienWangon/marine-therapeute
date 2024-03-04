@@ -14,10 +14,12 @@ header("Access-Control-Allow-Credentials: true");
 require_once __DIR__ . '/../controllers/ContactDetailsController.php';
 require_once __DIR__ . '/../controllers/ServicesController.php';
 require_once __DIR__ . '/../controllers/TestimoniesController.php';
+require_once __DIR__ . '/../controllers/DiplomesController.php';
 
 require_once __DIR__ . '/../repository/ContactDetailsRepository.php';
 require_once __DIR__ . '/../repository/ServicesRepository.php';
 require_once __DIR__ . '/../repository/TestimoniesRepository.php';
+require_once __DIR__ . '/../repository/DiplomesRepository.php';
 
 
 if($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
@@ -28,18 +30,21 @@ if($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 $contactDetailsRepo = new ContactDetailsRepository;
 $servicesRepo = new ServicesRepository;
 $testimoniesRepo = new TestimoniesRepository;
+$diplomesRepo = new DiplomesRepository;
 
 $controllers = [
     'contactDetails' => new ContactDetailsController($contactDetailsRepo),
     'services' => new ServicesController($servicesRepo),
     'testimonies' => new TestimoniesController($testimoniesRepo),
+    'diplomes' => new DiplomesController($diplomesRepo),
 ];
 
 $routes = [
     'GET' => [
         '/marine-therapeute/contact-info' => [$controllers['contactDetails'], 'getContactDetails'],
         '/marine-therapeute/services' => [$controllers['services'], 'getAllServices'],
-        '/marine-therapeute/testimonies' => [$controllers['testimonies'], 'getAllTestimonies']
+        '/marine-therapeute/testimonies' => [$controllers['testimonies'], 'getAllTestimonies'],
+        '/marine-therapeute/diplomes' => [$controllers['diplomes'], 'getAllDiplomes']
     ]
 ];
 
