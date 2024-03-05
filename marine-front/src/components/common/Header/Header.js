@@ -2,8 +2,12 @@ import React from 'react';
 import Button from '../Button/Button';
 
 import './header.css';
+import ContactHeader from '../../ContactInfo/ContactHeader/ContactHeader';
+
+import { useContactInfo } from '../../../context/ContactInfoContext';
 
 const Header = () => {
+    const { contactInfo, loading, error } = useContactInfo();
   return (
     <header>
         <div className="topHeader">
@@ -16,17 +20,20 @@ const Header = () => {
                 className="contactBtn"
                 type="button"
                 colorStyle="whiteBtn"
-                onClick={() => console.log('open modal')}
-            
+                onClick={() => console.log('open modal')}  
             />
-            <div className="contactInfo">
-                <span className="adress"></span>
-                <span className="phone"></span>
-            </div>
 
-
-        </div>
-      
+            {contactInfo.map((info) => (
+              <ContactHeader
+                key={info.id}
+                numero={info.numero}
+                rue={info.rue}
+                codePostal={info.codePostal}
+                ville={info.ville}
+                phone={info.phone}
+              />
+            ))}
+        </div>   
     </header>
   );
 };
