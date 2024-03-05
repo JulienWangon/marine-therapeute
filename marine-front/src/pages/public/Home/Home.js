@@ -20,6 +20,7 @@ import SocialMedia from '../../../components/SocialMedia/SocialMedia';
 import SectionServices from '../../../components/ServicesCard/SectionServices';
 import TestimoniesSlider from '../../../components/Testimonies/TestimoniesSlider/TestimoniesSlider';
 import Button from '../../../components/common/Button/Button';
+import DiplomeSection from '../../../components/Diplomes/DiplomeSection/DiplomeSection';
 
 
 const Home = () => {
@@ -144,8 +145,9 @@ const Home = () => {
           <p className="infoText">Les données transmises ne sont utilisées qu'à visée d'orientation et réduites au strict nécessaire.</p>
           <p className="infoText">Les méthodes utilisées s'inscrivent dans la relation d'aide, hors cadre médical et réglementé. Les thérapies proposées ne se substituent en rien à un acte ou traitement médical dont elles sont peut-être complémentaires. Je soumets ma pratique à une supervision régulière de mon travail à des superviseurs expérimentés. Cette supervision m'est indispensable selon moi et m'aide à être dans une relation thérapeutique saine, pour mieux accompagner mes consultants selon leur problèmatique et les résonnances chez moi.</p>
           <p className="infoText">Je m'engage également à une formation continue en participant fréquemment à des stages, des séminaires, des ateliers et des perfectionnements professionnels.</p>
-
-
+        </section>
+        <section className="sevenSection">
+          <DiplomeSection/>
         </section>
       </main>
 
