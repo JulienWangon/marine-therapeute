@@ -16,6 +16,7 @@ import impot from '../../../assets/img/impot.webp';
 import cheque from '../../../assets/img/cheque.webp';
 import ethique from '../../../assets/img/ethique.webp';
 
+
 import SocialMedia from '../../../components/SocialMedia/SocialMedia';
 import SectionServices from '../../../components/ServicesCard/SectionServices';
 import TestimoniesSlider from '../../../components/Testimonies/TestimoniesSlider/TestimoniesSlider';
