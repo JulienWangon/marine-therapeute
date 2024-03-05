@@ -9,6 +9,7 @@ import Therapiesystemique from './pages/public/TherapieSystemique/Therapiesystem
 import { ServicesProvider } from './context/ServicesContext.js';
 import { TestimoniesProvider } from './context/TestimoniesContext.js';
 import { DiplomesProvider } from './context/DiplomesContext.js';
+import { ContactInfoProvider } from './context/ContactInfoContext.js';
 
 function App() {
   return (
@@ -16,15 +17,17 @@ function App() {
       <ServicesProvider>
         <TestimoniesProvider>
           <DiplomesProvider>
+            <ContactInfoProvider>
             <BrowserRouter>
-              <Routes>
-                <Route index element={<Home />} />
-                <Route path="/accueil" element={<Home />} />
-                <Route path="/mon-parcours" element={<MonParcours />} />
-                <Route path="/therapie-systemique" element={<Therapiesystemique />} />
-                <Route path="/psychocorporelle" element={<PsychoCorporelle />} />
-              </Routes>
+                <Routes>
+                  <Route index element={<Home />} />
+                  <Route path="/accueil" element={<Home />} />
+                  <Route path="/mon-parcours" element={<MonParcours />} />
+                  <Route path="/therapie-systemique" element={<Therapiesystemique />} />
+                  <Route path="/psychocorporelle" element={<PsychoCorporelle />} />
+                </Routes>
             </BrowserRouter>
+            </ContactInfoProvider>
           </DiplomesProvider>
         </TestimoniesProvider>
       </ServicesProvider>
