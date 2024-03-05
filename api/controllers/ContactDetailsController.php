@@ -22,9 +22,13 @@ class ContactDetailsController {
 
             $contactDetailsArray = array_map(function ($contactDetail) {
                 return [
-                    'idContactDetails' => $contactDetail->getIdContactDetail(),
-                    'address' => $contactDetail->getAddress(),
+                    'id' => $contactDetail->getId(),
+                    'numero' => $contactDetail->getNumero(),
+                    'rue' => $contactDetail->getRue(),
+                    'codePostal' => $contactDetail->getCodePostale(),
+                    'ville' => $contactDetail->getVille(),
                     'phone' => $contactDetail->getPhone()
+
                 ];
             }, $contactDetails);
 
