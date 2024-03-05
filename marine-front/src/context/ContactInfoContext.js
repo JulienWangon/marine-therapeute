@@ -3,7 +3,7 @@ import useFetchAllContactInfo from '../components/ContactInfo/hooks/useFetchAllC
 
 const ContactInfoContext = createContext();
 
-export const DiplomesProvider = ({ children }) => {
+export const ContactInfoProvider = ({ children }) => {
   const { contactInfo, setContactInfo, loading, error } = useFetchAllContactInfo();
 
   return (
@@ -13,4 +13,4 @@ export const DiplomesProvider = ({ children }) => {
   );
 };
 
-export const useDiplomes = () => useContext(ContactInfoContext);
+export const useContactInfo = () => useContext(ContactInfoContext);
