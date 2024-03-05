@@ -4,13 +4,13 @@ import useFetchAllDiplomes from "../components/Diplomes/hooks/useFetchAllDiplome
 const DiplomesContext = createContext();
 
 export const DiplomesProvider = ({ children }) => {
-  const { services, setServices, loading, error } = useFetchAllDiplomes();
+  const { diplomes, setDiplomes, loading, error } = useFetchAllDiplomes();
 
   return (
-    <DiplomesContext.Provider value={{ services, setServices, loading, error }}>
+    <DiplomesContext.Provider value={{ diplomes, setDiplomes, loading, error }}>
       {children}
     </DiplomesContext.Provider>
   );
 };
 
-export const useServices = () => useContext(DiplomesContext);
+export const useDiplomes = () => useContext(DiplomesContext);
