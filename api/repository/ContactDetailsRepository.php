@@ -8,7 +8,7 @@ class ContactDetailsRepository extends Database {
     public function getAllContactDetails() :array {
         try {
             $db = $this->getBdd();
-            $req = "SELECT * FROM contactdetails";
+            $req = "SELECT * FROM contactinfo";
 
             $stmt = $db->prepare($req);
             $stmt->execute();
@@ -17,9 +17,12 @@ class ContactDetailsRepository extends Database {
             $contactDetails = [];
             foreach($contactDetailsData as $contactDetailData) {
                 $contactDetail = new ContactDetails(
-                    $contactDetailData["adress"],
-                    $contactDetailData["phone"],
-                    $contactDetailData["id"]
+                    $contactDetailData["numero"],
+                    $contactDetailData["rue"],
+                    $contactDetailData["codepostal"],
+                    $contactDetailData['ville'],
+                    $contactDetailData['telephone'],
+                    $contactDetailData['id']
                 );
                 $contactDetails[] = $contactDetail;
             }
