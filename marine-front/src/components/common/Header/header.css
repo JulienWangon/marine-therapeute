@@ -43,3 +43,8 @@ header{
   color: #5A1D3E;
   font-weight: 600;
 }
+
+.bottomHeader{
+  text-align: center;
+  width: 100%;
+}
