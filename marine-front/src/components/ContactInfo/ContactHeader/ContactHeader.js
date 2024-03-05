@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './contactHeader.css';
+
 const ContactHeader = ({ numero, rue, codePostal, ville, phone}) => {
   return (
     <div className="contactHeader">
