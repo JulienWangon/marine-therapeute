@@ -16,5 +16,10 @@ class Validator {
     return empty($this->errors["json"]);
   }
 
+   //Retourner les erreurs de validation
+  public function getErrors() {
+    return $this->errors;
+  }
+
   }
 
