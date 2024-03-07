@@ -61,14 +61,16 @@ class UserRepository extends Database {
 
       $stmt->bindValue(":password", $hashedPassword, PDO::PARAM_STR);
       $stmt->bindValue(":userEmail", $email, PDO::PARAM_STR);
-      $stmt->execute();
 
+      $stmt->execute();
       return $stmt->rowCount() > 0;
+
     } catch (PDOException $e) {
-      $this->handleException($e, "mise à jour du mot de passe de l'utilisateur");
-    
+      $this->handleException($e, "mise à jour du mot de passe de l'utilisateur");   
     }
   }
+
+  
 
 
 
