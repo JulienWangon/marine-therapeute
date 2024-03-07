@@ -7,7 +7,7 @@ import ContactHeader from '../../ContactInfo/ContactHeader/ContactHeader';
 import { useContactInfo } from '../../../context/ContactInfoContext';
 
 const Header = () => {
-    const { contactInfo, loading, error } = useContactInfo();
+    const { contactInfo } = useContactInfo();
   return (
     <header>
         <div className="topHeader">
