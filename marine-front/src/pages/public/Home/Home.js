@@ -22,6 +22,7 @@ import SectionServices from '../../../components/ServicesCard/SectionServices';
 import TestimoniesSlider from '../../../components/Testimonies/TestimoniesSlider/TestimoniesSlider';
 import Button from '../../../components/common/Button/Button';
 import DiplomeSection from '../../../components/Diplomes/DiplomeSection/DiplomeSection';
+import Footer from '../../../components/common/Footer/Footer';
 
 
 const Home = () => {
@@ -151,6 +152,7 @@ const Home = () => {
           <DiplomeSection/>
         </section>
       </main>
+      <Footer/>
 
 
       
