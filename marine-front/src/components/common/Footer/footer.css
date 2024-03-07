@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Chivo:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+footer {
+  margin-top: 4em;
+  background-color: white;
+  background-image: url('../../../../src//assets//img/logoFooter.webp');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contactTopFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.adressFooter, .phoneFooter {
+  color: #5a1d3e;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.adressSpan, .phoneNumFooter {
+  margin-left: 0.5em;
+}
+
+.phoneNumFooter {
+  text-decoration: none;
+  color: #5a1d3e;
+}
+
+.topfooterItem {
+  margin: 0.3em;
+}
+
+.contactBtnFooter {
+  width: 50%;
+  height: 100%;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+
+
+.serviceListFooter, .contactListFooter {
+  list-style: none;
+  color: #5a1d3e;
+  padding: 0;
+  
+}
+
+.serviceLien, .parcoursFooter {
+  text-decoration: none;
+  color: #5a1d3e;
+  margin-left: 0.5em;
+}
+
+.serviceListFooterItem, .contactFooterItem {
+  font-size: 0.7rem;
+}
+
+.serviceFooterTitle, .contactFooterTitle {
+  color: #5a1d3e;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+.bodyFooter {
+  width: 100vw;
+  display: flex;
+  margin-top: 1em;
+  align-items: center;
+  padding: 1em;
+  
+}
+
+.servicefooter, .contactFooter {
+  width: 50%;
+}
+
+.contactFooter, .serviceFooter {
+  height: 100px;
+  
+ 
+}
+
+.contactFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.socialFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  
+}
+
+.socialFooterMedia {
+  margin: 0.3em;
+}
+
+.legale {
+  color: #5a1d3e;
+  font-size: 0.6rem;
+  padding: 0.3em;
+}
+
+.bottomFooter {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative;
+}
+
+.bottomFooter::before {
+  content: ""; /* Nécessaire pour générer le pseudo-élément */
+  position: absolute;
+  top: 0; /* Ajustez en fonction de l'endroit où vous voulez que la bordure apparaisse */
+  left: 50%; /* Centrer le pseudo-élément */
+  transform: translateX(-50%); /* Ajustement fin pour centrer précisément le pseudo-élément */
+  width: 50%; /* Ajustez cette valeur pour contrôler la largeur de votre bordure */
+  height: 1px; /* Épaisseur de la bordure */
+  background-color: #5a1d3e; /* Couleur de la bordure */
+}
+
+.copyRight{text-align: center;}
+
+.copyrightText {
+  color: #5a1d3e;
+  font-size: 0.5rem;;
+}
+
+
+
+
+
+
+
+
+
+
