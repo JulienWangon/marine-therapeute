@@ -26,7 +26,7 @@ function App() {
                   <Route path="/mon-parcours" element={<MonParcours />} />
                   <Route path="/therapie-systemique" element={<Therapiesystemique />} />
                   <Route path="/constellations-familiales" element={<ConstellationsFamiliales/>}/>
-                  <Route path="/psychocorporelle" element={<PsychoCorporelle />} />
+                  <Route path="/therapie-psychocorporelle" element={<PsychoCorporelle />} />
                 </Routes>
             </BrowserRouter>
             </ContactInfoProvider>
