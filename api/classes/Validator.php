@@ -34,6 +34,37 @@ class Validator {
     return empty($this->errors["email"]);
   }
 
+  //Validation format du mot de passe 
+  public function validatePassword($password) {
+
+    //Vérifie si le password est présent
+    if(!$password || $password === ""){
+        $this->errors["password"][] = ["status" => "error", "message" => "Le mot de passe est requis"];
+
+    //Vérifie que le password a au moins une lettre majuscule
+    } else if (strlen($password) < 8) {
+        $this->errors["password"][] = ["status" => "error", "message" => "Le mot de passe doit contenir au moins 8 caractères."];
+
+    } else if (!preg_match("/[A-Z]/", $password)) {
+        $this->errors["password"][] = ["status" => "error", "message" => "Le mot de passe doit contenir au moins une lettre majuscule."];
+
+    //Vérifie que le password a au moins une lettre minuscule    
+    } else if (!preg_match("/[a-z]/", $password)) {
+        $this->errors["password"][] = ["status" => "error", "message" => "Le mot de passe doit contenir au moins une lettre minuscule."];
+
+    //Vérifie que le password à au moins un caratère spécial
+    } else if (!preg_match("/[\W]/", $password)) {
+        $this->errors["password"][] = ["status" => "error", "message" => "Le mot de passe doit contenir au moins un caractère spécial."];
+
+    //Vérifie que le password a au moinsun chiffre
+    }  else if (!preg_match("/[0-9]/", $password)) {
+        $this->errors["password"][] = ["status" => "error", "message" => "Le mot de passe doit contenir au moins un chiffre."];
+    }
+
+    return empty($this->errors["password"]);
+  } 
+
+
    //Retourner les erreurs de validation
   public function getErrors() {
     return $this->errors;
