@@ -1,0 +1,57 @@
+<?php
+
+require_once __DIR__ . '/../models/Database.php';
+require_once __DIR__ . '/../models/User.php';
+
+class UserRepository extends Database {
+
+  public function getUser() :array {
+    try {
+      $db = $this->getBdd();
+      $req = "SELECT * FROM user";
+      $stmt = $db->prepare($req);
+      $stmt->execute();
+      $usersData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+      $users = [];
+      foreach($usersData as $userData) {
+        $user = new User(
+          $userData['firstName'],
+          $userData['lastName'],
+          $userData['email'],
+          $userData['password'],
+          $userData['id']
+        );
+
+        $users[] = $user;       
+      }
+
+      return $users;
+       
+    } catch (PDOException $e) {
+      $this->handleException($e, "extraction des utilisateurs");
+    }
+  }
+
+  public function updateUser(User $user) :bool {
+    try {
+      $db = $this->getBdd();
+      $req = "UPDATE user SET firstName = :firstName, lastName = :lastName, email = :email WHERE id = :id";
+      $stmt = $db->prepare($req);
+
+      $stmt->bindValue(":firstName", $user->getFirstName(), PDO::PARAM_STR);
+      $stmt->bindValue(":lastName", $user->getLastName(), PDO::PARAM_STR);
+      $stmt->bindValue(":email", $user->getEmail(), PDO::PARAM_STR);
+      $stmt->bindValue(":id", $user->getId(), PDO::PARAM_INT);
+      
+      $stmt->execute();
+      return $stmt->rowCount() > 0;
+
+    } catch (PDOException $e) {
+      $this->handleException($e, "mise à jour de l'utilisateur");
+    }
+  }
+
+
+
+}
