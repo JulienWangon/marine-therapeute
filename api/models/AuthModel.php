@@ -26,7 +26,7 @@ class AuthModel {
     $payload = [
       "iat" => $issueAt,
       "exp" => $expiryTime,
-      "id" => $user['id'],
+      "id" => $user->getId(),
       "csrfToken" => $csrfToken
     ];
 
@@ -57,7 +57,7 @@ class AuthModel {
         'id' => $decoded->id,
         'csrfToken' => $decoded->csrfToken
       ];
-      
+
     } catch (ExpiredException $e) {
       throw new Exception("JWT expiré");
     } catch (Exception $e) {
