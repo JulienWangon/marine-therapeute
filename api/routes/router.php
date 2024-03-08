@@ -15,11 +15,19 @@ require_once __DIR__ . '/../controllers/ContactDetailsController.php';
 require_once __DIR__ . '/../controllers/ServicesController.php';
 require_once __DIR__ . '/../controllers/TestimoniesController.php';
 require_once __DIR__ . '/../controllers/DiplomesController.php';
+require_once __DIR__ . '/../controllers/AuthController.php';
 
 require_once __DIR__ . '/../repository/ContactDetailsRepository.php';
 require_once __DIR__ . '/../repository/ServicesRepository.php';
 require_once __DIR__ . '/../repository/TestimoniesRepository.php';
 require_once __DIR__ . '/../repository/DiplomesRepository.php';
+require_once __DIR__ . '/../repository/UserRepository.php';
+
+require_once __DIR__ . '/../models/AuthModel.php';
+
+require_once __DIR__ . '/../classes/Validator.php';
+
+
 
 
 if($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
@@ -31,12 +39,17 @@ $contactDetailsRepo = new ContactDetailsRepository;
 $servicesRepo = new ServicesRepository;
 $testimoniesRepo = new TestimoniesRepository;
 $diplomesRepo = new DiplomesRepository;
+$userRepo = new UserRepository;
+
+$authModel = new AuthModel;
+$validator = new Validator;
 
 $controllers = [
     'contactDetails' => new ContactDetailsController($contactDetailsRepo),
     'services' => new ServicesController($servicesRepo),
     'testimonies' => new TestimoniesController($testimoniesRepo),
     'diplomes' => new DiplomesController($diplomesRepo),
+    'auth' => new AuthController($userRepo, $authModel, $validator)
 ];
 
 $routes = [
@@ -45,6 +58,11 @@ $routes = [
         '/marine-therapeute/services' => [$controllers['services'], 'getAllServices'],
         '/marine-therapeute/testimonies' => [$controllers['testimonies'], 'getAllTestimonies'],
         '/marine-therapeute/diplomes' => [$controllers['diplomes'], 'getAllDiplomes']
+    ],
+
+    'POST' => [
+        '/marine-therapeute/login' => [$controllers['auth'], 'login'],
+        '/marine-therapeute/logout' => [$controllers['auth'], 'logout']
     ]
 ];
 
