@@ -76,9 +76,9 @@ class UserRepository extends Database {
       $req = "SELECT id, firstName, lastName, email, password FROM user WHERE email = :email LIMIT 1";
       $stmt = $db->prepare($req);
 
-      $stmt->bondValue(":email", $email, PDO::PARAM_STR);
+      $stmt->bindValue(":email", $email, PDO::PARAM_STR);
       $stmt->execute();
-      $userData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
       if($userData) {
         $user = new User(
