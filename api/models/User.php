@@ -8,7 +8,7 @@ class User {
   private string $email;
   private string $password;
 
-  public function __construc (string $firstName = null, string $lastName = null, string $email = null, string $password = null, ?int $id = null) {
+  public function __construct (string $firstName = null, string $lastName = null, string $email = null, string $password = null, ?int $id = null) {
     $this->firstName = $firstName;
     $this->lastName = $lastName;
     $this->email = $email;
