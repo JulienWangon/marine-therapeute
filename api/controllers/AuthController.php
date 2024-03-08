@@ -21,7 +21,7 @@ class AuthController {
     $this->validator = $validator;
   }
 
-  private function login() {
+  public function login() {
     try {
       $data = json_decode(file_get_contents('php://input'), true);
 
@@ -51,7 +51,7 @@ class AuthController {
       }
 
       $user = $this->userRepository->getUserByEmail($userEmail);
-      if(!$user || !password_verify($userPassword, $user['password'])) {
+      if(!$user || !password_verify($userPassword, $user->getPassword())) {
         ResponseHelper::sendResponse(['status' => 'error', 'message' => "Les informations d'identification fournies sont incorrectes"], 401);
         return;
       }
