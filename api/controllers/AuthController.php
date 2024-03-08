@@ -52,12 +52,12 @@ class AuthController {
 
       $user = $this->userRepository->getUserByEmail($userEmail);
       if(!$user || !password_verify($userPassword, $user['password'])) {
-        ResponseHelper::sendResponse(['status' => 'error', 'message' => "L'utilisateur n'existe pas."], 401);
+        ResponseHelper::sendResponse(['status' => 'error', 'message' => "Les informations d'identification fournies sont incorrectes"], 401);
         return;
       }
 
-      $id = $user['id'];
-      $firstName = $user['firstName'];
+      $id = $user->getId();
+      $firstName = $user->getFirstName();
 
       $jwtData = $this->authModel->createJWTForUser($user);
       $jwt = $jwtData['jwt'];
@@ -87,8 +87,27 @@ class AuthController {
     }
   }
 
+  public function logout() {
+    try {
+      if(isset($_COOKIE['token'])) {
+        unset($_COOKIE['token']);
+        setcookie('token', '', [
+          "expires" => time() - 3600, // Heure dans le passé pour effacer le cookie
+          "path" => '/',
+          "domain" => "", 
+          "secure" => true,
+          "httponly" => true,
+          "samesite" => 'None', 
+        ]);
 
+        ResponseHelper::sendResponse(['status' => 'succes', 'message' => 'Déconnexion réussie']);
+      } else {
+        ResponseHelper::sendResponse(['staus' => 'error', 'message' => 'Aucun utilisateur connecté'], 401);
+      }
 
-
+    } catch (Exception $e) {
+      ResponseHelper::sendResponse(['status' => 'error', 'message' => $e->getMessage()], 500);
+    }
+  }
 
 }
