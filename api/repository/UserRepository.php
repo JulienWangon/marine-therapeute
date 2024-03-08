@@ -70,7 +70,39 @@ class UserRepository extends Database {
     }
   }
 
-  
+  public function getUserByemail($email) {
+    try {
+      $db = $this->getBdd();
+      $req = "SELECT id, firstName, lastName, email, password FROM user WHERE email = :email LIMIT 1";
+      $stmt = $db->prepare($req);
+
+      $stmt->bondValue(":email", $email, PDO::PARAM_STR);
+      $stmt->execute();
+      $userData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+      if($userData) {
+        $user = new User(
+          $userData['firstName'],
+          $userData['lastName'],
+          $userData['email'],
+          $userData['password'],
+          $userData['id']
+        );
+
+        return $user;
+      } else {
+        return null;
+      }
+    } catch (PDOException $e) {
+      $this->handleException($e, "recherche de l'utilisateur");
+    }
+  }
+
+
+
+
+
+
 
 
 
