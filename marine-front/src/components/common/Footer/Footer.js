@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './footer.css';
 import Button from '../Button/Button';
+import ContactForm from '../../Contact/ContactForm/ContactForm';
+import Modal from '../../Modal/Modal';
 
 
 const Footer = () => {
+
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => setModalOpen(!isModalOpen);
 
   return (
     <footer>
@@ -17,7 +23,10 @@ const Footer = () => {
             <a className="phoneNumFooter" href="0725467895">0725467895</a>
           </div>
           <div class="contactBtnFooter topfooterItem">
-            <Button text="Contact" className="purpleBtn contactBtnFooter"/>
+            <Button text="Contact" className="purpleBtn contactBtnFooter" onClick={toggleModal}/>
+            <Modal isOpen={isModalOpen} onClose={toggleModal}>
+              <ContactForm />
+            </Modal>
           </div>
         </div>
         <div className="bodyFooter">
