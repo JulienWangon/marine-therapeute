@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Chivo:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+.contactTitle {
+  text-align: center;
+  color: #5A1D3E;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.formContainer {
+  width: 90vw;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(to right, #F6EDE8, rgba(167, 216, 184, 0.5));
+                      
+}
+
+.formContainer form .formTitle {
+font-size: 20px;
+font-weight: 500;
+font-family: "Montserrat", sans-serif;
+color: #5A1D3E;
+margin-bottom: 25px;
+margin-top: 25px;
+text-align: center;
+}
+
+.input, textarea {
+  margin: 1em 0 1em 0;
+  width: 300px;
+  position: relative;
+}
+
+.input input, textarea {
+  font-size: 100%;
+  padding: 0.7em;
+  outline: none;
+  color: #5A1D3E;
+  border: none;
+  border-bottom: 2px solid #5A1D3E;
+  background: transparent;
+  border-radius: none;
+  width: 90%;
+  resize: none;
+}
+
+.input label {
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top:0.3em;
+  left: 0;
+  color: #5A1D3E;
+  padding: 0.7em;
+  margin-left: 0.7em;
+  pointer-events: none;
+  transition: all 0.5s ease;
+ 
+}
+
+.input :is(input:focus, input:valid)~label {
+  transform: translateY(-70%) scale(.8);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.input textarea:focus ~ label,
+.input textarea:valid ~ label {
+  transform: translateY(-50%) scale(.8);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+input, textarea {
+  padding: 0;
+}
+
+.messageInput {
+  margin-top: 4em;
+}
+
+.submitArea {
+  text-align: center;
+}
