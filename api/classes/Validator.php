@@ -65,6 +65,54 @@ class Validator {
   } 
 
 
+  //Validation format du numéro de téléphone
+  public function validatePhoneNumber($phoneNumber, $type) {
+    // Vérifier si le numéro de téléphone existe
+    if (empty($phoneNumber)) {
+        $this->errors[$type][] = ["status" => "error", "message" => "Le numéro de téléphone est requis."];
+        return false;
+    }
+
+    // Vérifier le format du numéro de téléphone
+    if (!preg_match("/^[0-9]{10}$/", $phoneNumber)) {
+        $this->errors[$type][] = ["status" => "error", "message" => "Le format du numéro de téléphone est invalide."];
+        return false;
+    }
+
+    return empty($this->errors[$type]);
+  }
+
+  
+  //Validation des Nom et Prénom 
+  public function validateStringForNames($input, $type, $maxLength = 50) {
+    // Vérifie l'existence de la donnée
+    if (!$input || $input === "") {
+        $this->errors[$type][] = ["status" => "error", "message" => "Le champ $type est requis."];
+        return false;
+    }
+    // Vérification de la longueur minimale
+    else if (strlen($input) < 3) {
+        $this->errors[$type][] = ["status" => "error", "message" => "Le champ $type doit comporter au moins 3 caractères."];
+        return false;
+    }
+    // Vérification de la longueur maximale
+    else if (strlen($input) > $maxLength) {
+        // Correction du message d'erreur pour inclure "ne doit pas" au lieu de "ne doit pads"
+        $this->errors[$type][] = ["status" => "error", "message" => "Le champ $type ne doit pas dépasser $maxLength caractères."];
+        return false;
+    }
+    // Vérification du format
+    else {
+        if (!preg_match("/^[A-Za-z'\s-]+$/", $input)) {
+            $this->errors[$type][] = ["status" => "error", "message" => "Le champ $type peut uniquement contenir des lettres (majuscule et minuscules), des apostrophes et des tirets."];
+            return false;
+        }
+    }
+
+    return empty($this->errors[$type]);
+  }
+
+
    //Retourner les erreurs de validation
   public function getErrors() {
     return $this->errors;
