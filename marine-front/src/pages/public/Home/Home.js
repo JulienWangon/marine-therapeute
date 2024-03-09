@@ -25,6 +25,7 @@ import DiplomeSection from '../../../components/Diplomes/DiplomeSection/DiplomeS
 import Footer from '../../../components/common/Footer/Footer';
 
 
+
 const Home = () => {
 
   const handlePsychoClick = () => {
