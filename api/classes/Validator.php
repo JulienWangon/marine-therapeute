@@ -16,22 +16,24 @@ class Validator {
     return empty($this->errors["json"]);
   }
 
-  //Validation du format d'un email
   public function validateEmail($email) {
-
-    // Check if e-mail exists
+    // Vérifier si l'email existe
     if(!$email || $email == "") {
         $this->errors["email"][] = ["status" => "error", "message" => "L'adresse e-mail est requise."];
         return false;
     }
 
-    // Check e-mail format with filter_var()
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    // Sanitisation de l'email
+    $cleanEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+    // Vérifier le format de l'email avec filter_var() après la sanitisation
+    if(!filter_var($cleanEmail, FILTER_VALIDATE_EMAIL)) {
         $this->errors["email"][] = ["status" => "error", "message" => "L'adresse e-mail n'est pas valide."];
         return false;
     }
 
-    return empty($this->errors["email"]);
+    //Retour de l'email validé et nettoyé
+    return $cleanEmail; 
   }
 
   //Validation format du mot de passe 
