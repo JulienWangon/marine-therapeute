@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../Button/Button';
 
 import './header.css';
 import ContactHeader from '../../ContactInfo/ContactHeader/ContactHeader';
+import Modal from '../../Modal/Modal';
+import ContactForm from '../../Contact/ContactForm/ContactForm';
 
 import { useContactInfo } from '../../../context/ContactInfoContext';
 
 const Header = () => {
+
     const { contactInfo } = useContactInfo();
+    const [isModalOpen, setModalOpen] = useState(false);
+    const toggleModal = () => setModalOpen(!isModalOpen);
+
   return (
     <header>
         <div className="topHeader">
@@ -20,8 +26,11 @@ const Header = () => {
                 className="contactBtn"
                 type="button"
                 colorStyle="whiteBtn"
-                onClick={() => console.log('open modal')}  
+                onClick={toggleModal}  
             />
+            <Modal isOpen={isModalOpen} onClose={toggleModal}>
+              <ContactForm />
+            </Modal>
 
             {contactInfo.map((info) => (
               <ContactHeader
