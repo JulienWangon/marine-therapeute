@@ -5,15 +5,13 @@ class Contact {
   private string $firstName;
   private string $lastName;
   private string $email;
-  private string $phone;
   private string $subject;
   private string $content;
 
-  public function __construct(string $firstName = null, string $lastName = null, string $email = null, string $phone = null, string $subject = null, string $content = null, int $id = null) {
+  public function __construct(string $firstName = null, string $lastName = null, string $email = null, string $subject = null, string $content = null, int $id = null) {
     $this->firstName = $firstName;
     $this->lastName= $lastName;
     $this->email = $email;
-    $this->phone = $phone;
     $this->subject = $subject;
     $this->content = $content;
   }
@@ -32,10 +30,6 @@ class Contact {
 
   public function getEmail(): string {
     return $this->email;
-  }
-
-  public function getPhone(): string {
-    return $this->phone;
   }
 
   public function getSubject(): string {
@@ -62,10 +56,6 @@ class Contact {
     $this->email = $email;
   }
 
-  public function setPhone(string $phone): void {
-    $this->phone = $phone;
-  }
-
   public function setSubject(string $subject): void {
     $this->subject = $subject;
   }
@@ -73,9 +63,5 @@ class Contact {
   public function setContent(string $content): void {
     $this->content = $content;
   }
-
-
-
-
 
 }
