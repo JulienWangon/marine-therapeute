@@ -10,9 +10,10 @@ const Modal = ({ isOpen, onClose, children }) => {
       <div className="modalContainer" onClick={e => e.stopPropagation()}>
         {children}
       </div>
-      <button className="closeModal" onClick={onClose}>Fermer</button>
+      <button className="closeModal" onClick={onClose}><i className="fa fa-times"></i></button>
     </div>
   );
 };
 
 export default Modal;
+<i className="fa fa-times"></i>
