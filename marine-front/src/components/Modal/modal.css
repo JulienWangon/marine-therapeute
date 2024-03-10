@@ -26,6 +26,23 @@
 .closeModal {
   position: absolute;
   top: 10px;
-  right: 10px;
-  cursor: pointer;
+  right: 10px; 
+  width: 30px;
+  height: 30px; 
+  border-radius: 50%; 
+  border: none; 
+  background-color: transparent;
+  color: #5a1d3e; 
+  font-size: 20px; 
+  cursor: pointer; 
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  padding: 0; 
 }
+
+
+.closeModal:focus {
+  outline: none;
+}
+
