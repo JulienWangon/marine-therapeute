@@ -48,3 +48,53 @@ header{
   text-align: center;
   width: 100%;
 }
+
+
+
+@media screen and (min-width: 2559px) {
+ 
+
+}
+
+/* Plus grands écrans */
+@media screen and (min-width: 1400px) {
+
+}
+
+/* Grands écrans de bureau */
+@media screen and (max-width: 1399px) and (min-width: 1201px) {
+ 
+}
+
+/* Tablettes et petits écrans de bureau */
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+ 
+}
+
+/* Tablettes en orientation portrait et grands mobiles */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+  header{  
+    background-image: url('../../../../src//assets//img//header_grand.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+  }
+
+  .headerName {
+    font-size: 2.5rem; 
+   
+  }
+
+  .headerSlogan {
+    font-size: 1.8rem;  
+  }
+
+
+  
+}
+
+/* Appareils mobiles en orientation paysage */
+@media screen and (max-width: 767px) and (min-width: 576px) {
+ 
+}
