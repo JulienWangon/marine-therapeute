@@ -114,8 +114,27 @@ class Validator {
     return empty($this->errors[$type]);
   }
 
+  public function validateString($input, $type, $minLength, $maxLength) {
+    $cleanInput = trim($input);
+ 
+    $cleanInput = preg_replace("/[^a-zA-Z0-9 .,;:!?'\"\\-\/]/", "", $cleanInput);
 
-   //Retourner les erreurs de validation
+    if ($cleanInput === "") {
+        $this->errors[$type][] = ['status' => 'error', 'message' => "Le champ $type est requis"];
+        return false;
+    } else if (strlen($cleanInput) < $minLength) {
+        $this->errors[$type][] = ["status" => "error", 'message' => "Le champ $type doit comporter au moins $minLength caractères."];
+        return false;
+    } else if (strlen($cleanInput) > $maxLength) {
+        $this->errors[$type][] = ["status" => "error", 'message' => "Le champ $type ne doit pas dépasser $maxLength caractères."];
+        return false;
+    }
+
+    return $cleanInput;
+  }
+
+
+//Retourner les erreurs de validation
   public function getErrors() {
     return $this->errors;
   }
