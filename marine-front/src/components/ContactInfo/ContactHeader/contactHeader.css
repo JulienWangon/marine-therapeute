@@ -14,3 +14,11 @@
   color: white;
   margin-bottom: 0.5em;
 }
+
+
+/* Tablettes en orientation portrait et grands mobiles */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .contactHeader {
+    font-size: 1rem;
+  } 
+}
