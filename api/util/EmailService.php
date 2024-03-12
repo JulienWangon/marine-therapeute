@@ -21,7 +21,7 @@ class EmailService {
 
   }
 
-  public function sendemail($to, $subject, $body, $isHTML = true) {
+  public function sendEmail($to, $subject, $body, $isHTML = true) {
     try {
       $this->mailer->clearAddresses();
       $this->mailer->addAddress($to);
