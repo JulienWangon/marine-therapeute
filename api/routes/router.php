@@ -16,6 +16,7 @@ require_once __DIR__ . '/../controllers/ServicesController.php';
 require_once __DIR__ . '/../controllers/TestimoniesController.php';
 require_once __DIR__ . '/../controllers/DiplomesController.php';
 require_once __DIR__ . '/../controllers/AuthController.php';
+require_once __DIR__ . '/../controllers/ContactController.php';
 
 require_once __DIR__ . '/../repository/ContactDetailsRepository.php';
 require_once __DIR__ . '/../repository/ServicesRepository.php';
@@ -49,7 +50,8 @@ $controllers = [
     'services' => new ServicesController($servicesRepo),
     'testimonies' => new TestimoniesController($testimoniesRepo),
     'diplomes' => new DiplomesController($diplomesRepo),
-    'auth' => new AuthController($userRepo, $authModel, $validator)
+    'auth' => new AuthController($userRepo, $authModel, $validator),
+    'contact' => new ContactController($validator)
 ];
 
 $routes = [
@@ -62,7 +64,8 @@ $routes = [
 
     'POST' => [
         '/marine-therapeute/login' => [$controllers['auth'], 'login'],
-        '/marine-therapeute/logout' => [$controllers['auth'], 'logout']
+        '/marine-therapeute/logout' => [$controllers['auth'], 'logout'],
+        '/marine-therapeute/contact' => [$controllers['contact'], 'createContact']
     ]
 ];
 
