@@ -81,7 +81,7 @@ const Home = () => {
             <div className="socrate"><span>Socrate</span></div> 
           </div>
           <p className="citationFooter">Nous cherchons ensemble comment le problème qui vous pèse s'est installé.</p>
-          <h2>Un accompagnement pour créer le changement et retrouver votre autonomie.</h2>
+          <h2 className="h2SecondSection">Un accompagnement pour créer le changement et retrouver votre autonomie.</h2>
           <div className="infoCardWrapper">
             <InfoCard imageSrc={logo1} alt='à définir' primaryText='Séance individuelle'/>
             <InfoCard imageSrc={logo2} alt='à définir' primaryText='Thérapie de couple'/>
@@ -96,7 +96,7 @@ const Home = () => {
         </section>
 
         <section className="thirdSection">
-          <h2>Dans un cadre bienvaillant, confidentiel et sécurisant</h2>
+          <h2 className="h2ThirdSection">Dans un cadre bienvaillant, confidentiel et sécurisant</h2>
           <p className="thirdIntro">Je propose mes séances en cabinet à Metz, ou à distance, aux adultes, aux couples, aux familles, aux enfants, aux professionnels de santé, aux salariés d'entreprises, qui rencontre et vivent dans leur vie personnelle, familiale, ou professionnelle des difficultés, des conflits et des situations de souffrance.</p> 
           <div className="socialWrapper">
             <img className="portrait" src={marine} alt="portrait de Mme Ottaviani Marine"/>
@@ -104,7 +104,7 @@ const Home = () => {
           </div>         
         </section>
         <section className="fourSection">
-          <h2>Oser le changement, révélez votre potentiel</h2>
+          <h2 className="h2FourSection">Oser le changement, révélez votre potentiel</h2>
           <SectionServices/>
           <p className="infoText">Grâce à ces diffèrentes méthodes thérapeutique, nous découvront ensemble ce qui bloque ou freine l'atteinte de vos objectifs ou de votre épanouissement</p>
           <p className="infoText">Dans le respect de votre rythme et de vos intentions, je vous aide à faire naître la version de vous-même qui vous convient, l'être qui vous habite, vos projets, ce qui vous tient à coeur, le parent que vous êtes, l'amant(e) qui sommeille en vous, les relations harmonieuses que vous souhaitez vivre.</p>
