@@ -80,9 +80,7 @@ footer {
   
 }
 
-.servicefooter, .contactFooter {
-  width: 50%;
-}
+
 
 .contactFooter, .serviceFooter {
   height: 100px;
@@ -93,7 +91,6 @@ footer {
 .contactFooter {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 .socialFooter {
@@ -124,14 +121,14 @@ footer {
 }
 
 .bottomFooter::before {
-  content: ""; /* Nécessaire pour générer le pseudo-élément */
+  content: ""; 
   position: absolute;
-  top: 0; /* Ajustez en fonction de l'endroit où vous voulez que la bordure apparaisse */
-  left: 50%; /* Centrer le pseudo-élément */
-  transform: translateX(-50%); /* Ajustement fin pour centrer précisément le pseudo-élément */
-  width: 50%; /* Ajustez cette valeur pour contrôler la largeur de votre bordure */
-  height: 1px; /* Épaisseur de la bordure */
-  background-color: #5a1d3e; /* Couleur de la bordure */
+  top: 0; 
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 50%;
+  height: 1px; 
+  background-color: #5a1d3e;
 }
 
 .copyRight{text-align: center;}
@@ -142,6 +139,32 @@ footer {
 }
 
 
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+  .adressFooter, .phoneFooter {
+    font-size: 1rem;
+  }
+
+  .contactBtnFooter {
+    width: 40%;
+    font-size: 1rem;
+  }
+
+  .bodyFooter {
+    justify-content: space-between;
+    padding-left: 2em;
+    padding-right: 2em; 
+  }
+
+  .contactFooterTitle, .serviceFooterTitle {
+    font-size: 1rem;
+  }
+
+  .serviceListFooterItem, .contactFooterItem {font-size: 1rem;}
+
+
+
+}
 
 
 
