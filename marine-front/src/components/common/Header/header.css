@@ -92,7 +92,15 @@ header{
 
 }
 
-/* Appareils mobiles en orientation paysage */
-@media screen and (max-width: 767px) and (min-width: 576px) {
- 
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+
+  header{  
+    background-image: url('../../../../src//assets//img//header_grand.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+  }
+
+  
 }
