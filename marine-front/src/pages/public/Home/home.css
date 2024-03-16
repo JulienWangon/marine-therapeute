@@ -155,7 +155,7 @@ h2 {
   font-size: 0.8rem;
   color: #5A1D3E;
   font-family: "Open Sans", sans-serif;
-  padding: 1.5em;
+  padding: 1em;
   margin: 0;
 }
 
@@ -302,3 +302,149 @@ h2 {
 .ethiqueImg {
   width: 100vw;
 }
+
+
+
+
+@media screen and (min-width: 2559px) {
+ 
+
+}
+
+/* Plus grands écrans */
+@media screen and (min-width: 1400px) {
+
+}
+
+/* Grands écrans de bureau */
+@media screen and (max-width: 1399px) and (min-width: 1201px) {
+ 
+}
+
+/* Tablettes et petits écrans de bureau */
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+ 
+}
+
+/* Tablettes en orientation portrait et grands mobiles */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+  .homeTitle {
+    font-size: 1.8rem;
+  }
+
+  .titleSlogan{
+    font-size: 1.3rem;
+  }
+
+  .firstSection {
+    margin-top: 3em;
+  }
+
+  .logoWrapper, .topLogo, .bodyLogo, .footerLogo {
+    width: 80vw;
+  
+  }
+
+  .backgroundLogo {
+    width: 100%;
+  }
+
+  .spanTitle {
+    font-size: 1.2rem;
+  }
+
+  .pourText {
+    font-size: 1rem;
+    margin-top: 0.7em;
+  }
+
+  .ouItem {
+    font-size: 1rem;
+  }
+
+  .comment {
+    font-size: 1rem;
+  }
+
+  .secondSection {
+    margin-top: 3em;
+  }
+
+  .citation {
+    font-size: 1.2rem;
+  }
+
+  .socrate {
+    font-size: 0.9rem;
+  }
+
+  .citationFooter {
+    font-size: 0.9rem;
+  }
+
+  .h2SecondSection {
+    width: 100%;
+    margin-top: 2em;
+    font-size: 1.2rem;
+  }
+
+  .infoCardWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .infoText {
+    font-size: 1rem;
+    padding: 1em;
+  }
+
+  .thirdSection {
+    margin-top: 3em;
+  }
+
+  .h2ThirdSection {
+    font-size: 1.5rem;
+  }
+
+  .thirdIntro {
+    font-size: 1rem;
+    padding: 1.2em;
+  }
+
+  .portrait {
+    width: 13rem;
+  }
+
+  .fourSection {
+    margin-top: 3em;
+  }
+
+  .h2FourSection {
+    font-size: 1.5rem;;
+  }
+
+  .buttonPsycho {
+    width: 25%;
+  }
+
+  .priceWrapper {
+    width: 50%;
+  }
+
+  .asterixInfo {
+    font-size: 0.8rem;
+  }
+
+  .impotCheque {
+    width: 12%;
+  }
+
+  .impotText {
+    font-size: 0.8rem;
+  }
+
+  
+}
+
