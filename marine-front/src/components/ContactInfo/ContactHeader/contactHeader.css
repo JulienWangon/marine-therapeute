@@ -6,7 +6,7 @@
   flex-direction: column;
   color: white;
   font-family: "Alice", serif;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .phone {
@@ -21,4 +21,19 @@
   .contactHeader {
     font-size: 1rem;
   } 
+}
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 1400px) {
+  .contactHeader {
+    font-size: 1.2rem;
+    color: #5a1d3e;
+  }
+
+  .phone {
+    color: #5a1d3e;
+  }
 }

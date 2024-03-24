@@ -19,3 +19,24 @@
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
+
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+
+  .serviceImg {
+    width:
+     150px;
+  }
+
+  .serviceName {
+    font-size: 0.8rem;
+  }
+
+  .servicesCard {
+    width: 33vw;
+  
+  }
+
+
+
+}
