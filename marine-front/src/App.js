@@ -8,15 +8,13 @@ import Therapiesystemique from './pages/public/TherapieSystemique/Therapiesystem
 import ConstellationsFamiliales from './pages/public/ConstellationsFamiliales/ConstellationsFamiliales.js';
 
 import { ServicesProvider } from './context/ServicesContext.js';
-import { TestimoniesProvider } from './context/TestimoniesContext.js';
 import { DiplomesProvider } from './context/DiplomesContext.js';
 import { ContactInfoProvider } from './context/ContactInfoContext.js';
 
 function App() {
   return (
     <div className="App">
-      <ServicesProvider>
-        <TestimoniesProvider>
+      <ServicesProvider>    
           <DiplomesProvider>
             <ContactInfoProvider>
             <BrowserRouter>
@@ -31,7 +29,6 @@ function App() {
             </BrowserRouter>
             </ContactInfoProvider>
           </DiplomesProvider>
-        </TestimoniesProvider>
       </ServicesProvider>
     </div>
   );
