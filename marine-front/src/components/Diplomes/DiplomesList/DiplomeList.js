@@ -2,7 +2,7 @@ import React from 'react';
 
 import './diplomeList.css';
 
-const DiplomeList = ({ diplome, intitule, lieu }) => {
+const DiplomeList = ({id, diplome, intitule, lieu }) => {
 
   
   return (
