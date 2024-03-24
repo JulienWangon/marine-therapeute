@@ -47,6 +47,7 @@ header{
 .bottomHeader{
   text-align: center;
   width: 100%;
+  margin-bottom: 2em;
 }
 
 
@@ -59,16 +60,46 @@ header{
 /* Plus grands écrans */
 @media screen and (min-width: 1400px) {
 
+  header{  
+    background-image: url('../../../../src//assets//img/headerDesktop.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .topHeader {
+    width: 50vw;
+    margin-top: 10em;
+  }
+
+  .bottomHeader {
+    width: 50vw;
+    margin-bottom: 20em;
+  }
+
+  .headerName {
+    font-size: 4rem;
+  }
+
+  .headerSlogan {
+    font-size: 2rem;
+  }
+
+
+
 }
 
 /* Grands écrans de bureau */
 @media screen and (max-width: 1399px) and (min-width: 1201px) {
+
  
 }
 
 /* Tablettes et petits écrans de bureau */
 @media screen and (max-width: 1200px) and (min-width: 992px) {
- 
+  
 }
 
 /* Tablettes en orientation portrait et grands mobiles */
@@ -101,6 +132,5 @@ header{
     background-position: center;
     background-repeat: no-repeat;  
   }
-
-  
+ 
 }

@@ -25,7 +25,7 @@ const Header = () => {
                 text="contact"
                 className="contactBtn"
                 type="button"
-                colorStyle="whiteBtn"
+                colorStyle="purpleBtn"
                 onClick={toggleModal}  
             />
             <Modal isOpen={isModalOpen} onClose={toggleModal}>
