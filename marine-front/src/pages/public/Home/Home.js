@@ -19,10 +19,10 @@ import ethique from '../../../assets/img/ethique.webp';
 
 import SocialMedia from '../../../components/SocialMedia/SocialMedia';
 import SectionServices from '../../../components/ServicesCard/SectionServices';
-import TestimoniesSlider from '../../../components/Testimonies/TestimoniesSlider/TestimoniesSlider';
 import Button from '../../../components/common/Button/Button';
 import DiplomeSection from '../../../components/Diplomes/DiplomeSection/DiplomeSection';
 import Footer from '../../../components/common/Footer/Footer';
+
 
 
 
@@ -117,8 +117,8 @@ const Home = () => {
         </section>
         <section className="fiveSection">
           <h2 className="sliderTitle">Quand le changement prend racine: vos témoignages sont précieux</h2>
-          <TestimoniesSlider/>
-          <Button className="testimonyBtn purpleBtn" text="Avis"/>
+          
+
           <div className="priceWrapper">
               <h3 className="priceTitle">TARIFS*</h3>
               <ul className="priceList">
