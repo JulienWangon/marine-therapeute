@@ -15,14 +15,14 @@ const Footer = () => {
     <footer>
         <div className="contactTopFooter">
           <div className="adressFooter topfooterItem">
-            <i class="fa-solid fa-location-dot"></i>
+            <i className="fa-solid fa-location-dot"></i>
             <span className="adressSpan">28, Rue des Dépravés 57000 Metz</span>
           </div>
           <div className="phoneFooter topfooterItem">
-            <i class="fa-solid fa-phone"></i>
+            <i className="fa-solid fa-phone"></i>
             <a className="phoneNumFooter" href="0725467895">0725467895</a>
           </div>
-          <div class="contactBtnFooter topfooterItem">
+          <div className="contactBtnFooter topfooterItem">
             <Button text="Contact" className="purpleBtn contactBtnFooter" onClick={toggleModal}/>
             <Modal isOpen={isModalOpen} onClose={toggleModal}>
               <ContactForm />
@@ -34,22 +34,22 @@ const Footer = () => {
             <h3 className="serviceFooterTitle">Services</h3>
             <ul className="serviceListFooter">
                 <li className="serviceListFooterItem">
-                <i class="fa-solid fa-chevron-right"></i><a className="serviceLien" href="/therapie-systemique">Thérapie-systèmique</a>
+                <i className="fa-solid fa-chevron-right"></i><a className="serviceLien" href="/therapie-systemique">Thérapie-systèmique</a>
                 </li>
                 <li className="serviceListFooterItem">
-                <i class="fa-solid fa-chevron-right"></i><a className="serviceLien" href="/constellations-familiales">Constellations familiales</a>
+                <i className="fa-solid fa-chevron-right"></i><a className="serviceLien" href="/constellations-familiales">Constellations familiales</a>
                 </li>
                 <li className="serviceListFooterItem">
-                <i class="fa-solid fa-chevron-right"></i><a className="serviceLien" href="/therapie-psychocorporelle">Thérapie psychocorporelle</a>
+                <i className="fa-solid fa-chevron-right"></i><a className="serviceLien" href="/therapie-psychocorporelle">Thérapie psychocorporelle</a>
                 </li>
             </ul>
           </div>
           <div className="contactFooter">
             <h3 className="contactFooterTitle">Marine Ottaviani</h3>
             <ul className="contactListFooter">
-              <li className="contactFooterItem"><i class="fa-solid fa-chevron-right"></i><a className="parcoursFooter" href="/mon-parcours">Mon parcours</a></li>
-              <li className="contactFooterItem"><i class="fa-solid fa-chevron-right"></i><a className="parcoursFooter" href="https://www.psychologue.net/cabinets/marine-ottaviani">Psychologue.net</a></li>
-              <li className="contactFooterItem"><i class="fa-solid fa-chevron-right"></i><a className="parcoursFooter" href="https://www.neovieonline.com/marine-ottaviani-praticienne-en-constellations-familiales-f1345483.html">Néovie</a></li>
+              <li className="contactFooterItem"><i className="fa-solid fa-chevron-right"></i><a className="parcoursFooter" href="/mon-parcours">Mon parcours</a></li>
+              <li className="contactFooterItem"><i className="fa-solid fa-chevron-right"></i><a className="parcoursFooter" href="https://www.psychologue.net/cabinets/marine-ottaviani">Psychologue.net</a></li>
+              <li className="contactFooterItem"><i className="fa-solid fa-chevron-right"></i><a className="parcoursFooter" href="https://www.neovieonline.com/marine-ottaviani-praticienne-en-constellations-familiales-f1345483.html">Néovie</a></li>
             </ul>
           </div>
         </div>
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
    
         <div className="bottomFooter">
-          <span class="mentionsLegales"><a className="legale" href="#">Mentions légales</a></span>
+          <span className="mentionsLegales"><a className="legale" href="#">Mentions légales</a></span>
           <span className="cgv"><a className="legale" href="#">Conditon générales de vente</a></span>
           <span className="cookie"><a className="legale" href="#">Données personnelles et cookies</a></span>
         </div>
